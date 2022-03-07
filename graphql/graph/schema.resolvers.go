@@ -14,7 +14,19 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) 
 	panic(fmt.Errorf("not implemented"))
 }
 
+func (r *mutationResolver) UpsertCharacter(ctx context.Context, input *model.CharacterInput) (*model.Character, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) Character(ctx context.Context, id string) (*model.Character, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) Viewers(ctx context.Context) ([]*model.Character, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 

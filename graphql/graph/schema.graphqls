@@ -16,6 +16,9 @@ type User {
 
 type Query {
   todos: [Todo!]!
+  character(id:ID!): Character
+  viewers: [Character]!
+
 }
 
 input NewTodo {
@@ -25,4 +28,18 @@ input NewTodo {
 
 type Mutation {
   createTodo(input: NewTodo!): Todo!
+  upsertCharacter(input: CharacterInput): Character!
+}
+
+# types definitions
+type Character {
+  id: ID!
+  name: String!
+  type: String!
+}
+
+input CharacterInput{
+  name: String!
+  type: String!
+  id: String
 }
